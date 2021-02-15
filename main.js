@@ -5,6 +5,17 @@ const client = new Discord.Client();
 
 const prefix = '-';
 
+const fs = require('fs');
+
+client.commands = new Discord.Collections();
+
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+    const command = require(`./commands/$(file)`);
+    client.comamnd.set(command.name, command);
+}
+
+
 client.once('ready', () => {
     console.log('hoRNG-bot is online')
 });
