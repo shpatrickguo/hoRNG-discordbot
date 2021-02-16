@@ -5,7 +5,7 @@ module.exports = {
   aliases: ["wthr"],
   async execute(message, args, cmd, client, Discord) {
     weather.find(
-      { search: args.join(" "), degreeType: "F" },
+      { search: args.join(" "), degreeType: "C" },
       function (error, result) {
         // 'C' can be changed to 'F' for farneheit results
         if (error) return message.channel.send(error);

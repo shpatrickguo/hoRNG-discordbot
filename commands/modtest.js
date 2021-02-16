@@ -1,7 +1,7 @@
 module.exports = {
     name: 'modtest',
     description: "tests whether user is a mod",
-    execute(mesage, args, cmd, client, Discord) {
+    execute(message, args, cmd, client, Discord) {
         if (message.member.roles.cache.has('810768729415483422')) {
             message.channel.send('You are a mod.')
         } else {
