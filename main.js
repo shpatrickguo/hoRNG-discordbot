@@ -7,6 +7,8 @@ const prefix = '-';
 
 const fs = require('fs');
 
+const memberCounter = require('./counters/member-counter');
+
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -16,7 +18,8 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', () => {
-    console.log('hoRNG-bot is online')
+    console.log('hoRNG-bot is online');
+    memberCounter(client);
 });
 
 client.on('guildMemberAdd', guildMember => {
@@ -47,9 +50,11 @@ client.on('message', message => {
         client.commands.get('mute').execute(message, args);
     } else if (command == 'unmute') {
         client.commands.get('unmute').execute(message, args);
-    } else if (command == 'unmute') {
-        client.commands.get('unmute').execute(message, args, Discord, client);
-    }
+    } 
+    
+    //else if (command == 'reactionrole') {
+    //    client.commands.get('unmute').execute(message, args, Discord, client);
+    // }
 });
 
-client.login(process.env.TOKENJS);
+client.login(process.env.TOKEN);

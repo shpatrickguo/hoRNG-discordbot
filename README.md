@@ -1,6 +1,13 @@
 # hoRNG-discordbot
 Discord bot for hoRNG server.
 
+Installations
+```
+npm i discord.js
+npm i fs
+npm install ms
+npm install @discordjs/opus ffmpeg-static yt-search ytdl-core 
+```
 
 
 # Guides, Tutorials, and Inpsiration
