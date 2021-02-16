@@ -8,8 +8,10 @@ module.exports = {
       .setColor("FADF2E")
       .setTitle("Commands")
       .addFields(
-        { name: "`play URL/KEYWORDs`", value: "plays a video from youtube" },
-        { name: "`skip`", value: "skips current video" },
+        { name: "`play URL/KEYWORDs`", value: "plays audio from youtube" },
+        { name: "`pause`", value: "pauses current audio" },
+        { name: "`unpause`", value: "unpauses current audio" },
+        { name: "`skip`", value: "skips current audio" },
         { name: "`stop`", value: "stops playing audio" },
         { name: "`rules`", value: "server rules" },
         { name: "`suggest SUGGESTION`", value: "make a suggestion" },
