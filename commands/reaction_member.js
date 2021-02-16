@@ -1,5 +1,5 @@
 module.exports = {
-  name: "reaction_rules",
+  name: "reaction_members",
   aliases: ["read_rules"],
   permissions: ["MANAGE_ROLES"],
   description: "react and assign role member",
