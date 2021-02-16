@@ -3,7 +3,7 @@ const ms = require('ms');
 module.exports = {
     name: 'mute',
     description: "mutes a member",
-    execute(client, message, args) {
+    execute(mesage, args, cmd, client, Discord) {
         if (message.member.roles.cache.has('810768729415483422')) {
             const target = message.mentions.users.first();
             if (target) {

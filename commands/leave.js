@@ -1,7 +1,7 @@
 module.exports = {
   name: "leave",
   description: "stop the bot and leave the channel",
-  async execute(client, message, args) {
+  async execute(mesage, args, cmd, client, Discord) {
     const voiceChannel = message.member.voice.channel;
 
     if (!voiceChannel)
