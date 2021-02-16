@@ -31,8 +31,8 @@ client.on('message', message => {
         client.commands.get('moo').execute(message, args);
     } else if (command == 'modtest'){
         client.commands.get('modtest').execute(message, args);
-    } else if (command == 'rules'){
-        client.commands.get('rules').execute(message, args);
+    } else if (command == 'clear'){
+        client.commands.get('clear').execute(message, args);
     }
 });
 
