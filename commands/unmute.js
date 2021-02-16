@@ -1,7 +1,7 @@
 module.exports = {
     name: 'unmute',
     description: "unmutes a member",
-    execute(message, args) {
+    execute(client, message, args) {
         if (message.member.roles.cache.has('810768729415483422')) {
             const target = message.mentions.users.first();
             if (target) {
