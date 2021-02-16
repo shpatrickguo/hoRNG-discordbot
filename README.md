@@ -8,6 +8,7 @@ npm i discord.js
 npm i fs
 npm install ms
 npm install @discordjs/opus ffmpeg-static yt-search ytdl-core 
+npm i weather-js
 ```
 [FFmpeg](https://ffmpeg.org/download.html)
 
