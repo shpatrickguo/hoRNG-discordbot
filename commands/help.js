@@ -1,12 +1,12 @@
 module.exports = {
   name: "help",
-  alias: ["h", "commands"],
+  aliases: ["h", "commands"],
   permissions: [],
   description: "lists commands",
   execute(message, args, cmd, client, Discord) {
     const embed = new Discord.MessageEmbed()
       .setColor("FADF2E")
-      .setTitle("Rules")
+      .setTitle("Commands")
       .addFields(
         { name: "`play URL/KEYWORDs`", value: "plays a video from youtube" },
         { name: "`skip`", value: "skips current video" },
