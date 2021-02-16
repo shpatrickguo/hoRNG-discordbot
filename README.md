@@ -3,6 +3,7 @@ Discord bot for hoRNG server.
 
 Installations
 ```
+npm i dotenv
 npm i discord.js
 npm i fs
 npm install ms
