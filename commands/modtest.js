@@ -7,8 +7,5 @@ module.exports = {
         } else {
             message.channel.send('You do not have access to this commmand.')
         }
-        
-        
-        
     }
 }
