@@ -6,7 +6,7 @@ const queue = new Map();
 
 module.exports = {
   name: "play",
-  aliases: ["skip", "stop"], 
+  aliases: ["skip", "stop", "pause", "unpause"],
   cooldown: 0,
   permissions: [],
   description: "Advanced music bot",
@@ -81,8 +81,24 @@ module.exports = {
         server_queue.songs.push(song);
         return message.channel.send(`👍 **${song.title}** added to queue!`);
       }
-    } else if (cmd === "skip") skip_song(message, server_queue);
+    } 
+    else if (cmd === "skip") skip_song(message, server_queue);
     else if (cmd === "stop") stop_song(message, server_queue);
+    //Pause command
+    else if (cmd == "pause") {
+      if (server_queue.connection.dispatcher.paused)
+        return message.channel.send("Song is already paused!"); //Checks if the song is already paused.
+      server_queue.connection.dispatcher.pause(); //If the song isn't paused this will pause it.
+      message.channel.send("Paused the song!"); //Sends a message to the channel the command was used in after it pauses.
+    }
+
+    //Unpause command
+    else if (cmd == "unpause") {
+      if (!server_queue.connection.dispatcher.paused)
+        return message.channel.send("Song isn't paused!"); //Checks if the song isn't paused.
+      server_queue.connection.dispatcher.resume(); //If the song is paused this will unpause it.
+      message.channel.send("Unpaused the song!"); //Sends a message to the channel the command was used in after it unpauses.
+    }
   },
 };
 
