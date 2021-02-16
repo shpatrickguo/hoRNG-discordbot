@@ -12,6 +12,7 @@ module.exports = {
         { name: "`skip`", value: "skips current video" },
         { name: "`stop`", value: "stops playing audio" },
         { name: "`rules`", value: "server rules" },
+        { name: "`suggest SUGGESTION`", value: "make a suggestion" },
         { name: "`ping`", value: "Latency check" },
         { name: "`weather LOCATION`", value: "current weather at location" },
         { name: "`avatar`", value: "returns profile pic" },
