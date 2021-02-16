@@ -5,7 +5,7 @@ module.exports = (client, Discord) => {
     .readdirSync("./commands/")
     .filter((file) => file.endsWith(".js"));
   for (const file of command_files) {
-    const command = requrie(`../commands/${file}`);
+    const command = require(`../commands/${file}`);
     if (command.name) {
       client.commands.set(command.name, command);
     } else {
