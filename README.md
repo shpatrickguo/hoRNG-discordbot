@@ -12,6 +12,32 @@ npm i weather-js
 ```
 [FFmpeg](https://ffmpeg.org/download.html)
 
+# Features
+Prefix: !
+Commands include aliases
+- !avatar: Display Avatar
+- !clear NUMERIC: Clears NUMERIC messages up to 100
+- !help: Lists all public commands 
+- !modtest: Tests whether user is a moderator
+- !moo: Sends a custom youtube link
+- !ping: Sends an embed describing user latency
+- !play URL/KEYWORDS: plays audio from youtube
+  - !pause: pauses audio
+  - !unpause: unpauses audio
+  - !skip: skips current audio to next on queue
+  - !stop: stops current audio and disconnects bot from voice channel
+- !rules: Lists rules of server in an embed
+- !suggestions TEXT: Sends an embed of user suggestion with reactions
+- !weather LOCATION: sends weather of location
+
+Requires permissions
+- !ban @USER: Bans @user
+- !kick @USER: Kicks @user
+- !mute @USER: Mutes @user
+- !unmute @USER: Unmutes @user
+- !reaction_rules: Sends an embed that assigns role from reaction
+
+
 
 # Guides, Tutorials, and Inpsiration
 - [FreeCodeCamp](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)
