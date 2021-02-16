@@ -19,6 +19,12 @@ client.once('ready', () => {
     console.log('hoRNG-bot is online')
 });
 
+client.on('guildMemberAdd', guildMember => {
+    let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'member');
+    guildMember.roles.add(welcomeRole);
+    guildMember.guild.channels.cache.get(509298603693572097).send(`Welcome <@${guildMember.user.id} to our server! Make sure to check out the rules channel!`)
+})
+
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
