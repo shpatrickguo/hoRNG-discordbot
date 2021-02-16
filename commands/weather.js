@@ -3,6 +3,8 @@ const weather = require("weather-js");
 module.exports = {
   name: "weather",
   aliases: ["wthr"],
+  permissions: [],
+  description: "returns the weather",
   async execute(message, args, cmd, client, Discord) {
     weather.find(
       { search: args.join(" "), degreeType: "C" },

@@ -1,5 +1,6 @@
 module.exports = {
     name: 'modtest',
+    permissions: [],
     description: "tests whether user is a mod",
     execute(message, args, cmd, client, Discord) {
         if (message.member.roles.cache.has('810768729415483422')) {

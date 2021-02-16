@@ -1,5 +1,6 @@
 module.exports = {
     name: 'reactionrole',
+    permissions: [],
     description: "Sets up a reaction role message!",
     async execute(message, args, cmd, client, Discord) {
         const channel = 'YOUR_CHANNEL';

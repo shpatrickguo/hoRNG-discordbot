@@ -1,5 +1,6 @@
 module.exports = {
   name: "ping",
+  permissions: [],
   description: "this is a ping cmd",
   execute(message, args, cmd, client, Discord) {
     const embed = new Discord.MessageEmbed()
