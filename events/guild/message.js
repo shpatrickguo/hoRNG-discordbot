@@ -1,5 +1,5 @@
 require("dotenv").config();
-const cooldown = new Map();
+const cooldowns = new Map();
 module.exports = (Discord, client, message) => {
   const prefix = process.env.PREFIX;
   if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -11,7 +11,7 @@ module.exports = (Discord, client, message) => {
     client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
 
   if(!cooldowns.has(command.name)) {
-    cooldowns.set(command.name, new Discord.Collections());
+    cooldowns.set(command.name, new Discord.Collection());
   }
   const current_time = Date.now();
   const time_stamps = cooldowns.get(command.name);
@@ -30,7 +30,7 @@ module.exports = (Discord, client, message) => {
   try {
     command.execute(message, args, cmd, client, Discord);
   } catch (err) {
-    message.replay("There was an error when trying to execute this command!");
+    message.reply("There was an error when trying to execute this command!");
     console.log(err);
   }
 };

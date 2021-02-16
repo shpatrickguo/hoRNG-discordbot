@@ -2,7 +2,7 @@ module.exports = {
   name: "avatar",
   aliases: ["icon", "pfp", "profilepic"],
   description: "Return a user(s) avatar picture!",
-  execute(mesage, args, cmd, client, Discord) {
+  execute(message, args, cmd, client, Discord) {
     if (!message.mentions.users.size) {
       return message.channel.send(
         `**Your Avatar: ** ${message.author.displayAvatarURL({

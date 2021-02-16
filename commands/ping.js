@@ -1,7 +1,7 @@
 module.exports = {
   name: "ping",
   description: "this is a ping cmd",
-  execute(mesage, args, cmd, client, Discord) {
+  execute(message, args, cmd, client, Discord) {
     const embed = new Discord.MessageEmbed()
       .setTitle("Bots ping")
       .setColor("RANDOM").setDescription(`Latency is ${
