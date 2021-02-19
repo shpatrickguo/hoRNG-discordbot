@@ -1,8 +1,8 @@
 module.exports = {
-    name: "questions",
-    aliases: ["q"],
+    name: "todo",
+    aliases: [""],
     permissions: [],
-    description: "lists questions",
+    description: "To do list",
     execute(message, args, cmd, client, Discord) {
       const embed = new Discord.MessageEmbed()
         .setColor("2af779")
@@ -20,7 +20,7 @@ module.exports = {
           {
             name: "What we need answered",
             value:
-              "1. Corporate information and how they do their CSR? \n 2. Identify levels of compliance by corp size (categorized by revenue?) \n 3. Identify targets of funding by SDG \n 4. Identify any correlation between SDGs/state of the union and corp donation? \n 5. Where corps/industries are donating and where they are geographically?",
+              "1. Corporate information and how they do their CSR? \n 2. Identify levels of compliance by corp size (categorized by revenue?) - Esp last 2 years \n 3. Identify targets of funding by SDG \n 4. Identify any correlation between SDGs/state of the union and corp donation? \n 5. Where corps/industries are donating and where they are geographically? \n 6. How does the CSR allocation help the region or the SDGs - How could spending be improved?",
             inline: false
           }
         );
