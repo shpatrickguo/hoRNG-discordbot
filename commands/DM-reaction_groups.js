@@ -5,7 +5,7 @@ module.exports = {
   description: "react and assign role member",
   async execute(message, args, cmd, client, Discord) {
     if (message.member.roles.cache.has("813557830401523712")) {
-      const channel = "808286950703235112";
+      const channel = "813563481231196212";
       const group1Role = message.guild.roles.cache.find(
         (role) => role.name === "CSR Team 1"
       );
@@ -48,14 +48,14 @@ module.exports = {
       let messageEmbed = await message.channel
         .send(embed)
         .then((msg) => {
+          msg.react(group1Emoji);
+          msg.react(group2Emoji);
+          msg.react(group3Emoji);
           message.delete();
         })
         .catch((err) => {
           throw err;
         });
-      messageEmbed.react(group1Emoji);
-      messageEmbed.react(group2Emoji);
-      messageEmbed.react(group3Emoji);
 
       client.on("messageReactionAdd", async (reaction, user) => {
         if (reaction.message.partial) await reaction.message.fetch();

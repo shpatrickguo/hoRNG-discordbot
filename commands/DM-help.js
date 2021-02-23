@@ -22,13 +22,11 @@ module.exports = {
         },
         { name: "`meeting <TIME>`", value: "Announces meeting time." },
         { name: "`todo`", value: "ToDo list." },
-        { name: "`assign`", value: "Assign groups." }
+        { name: "`assign`", value: "Assign groups." },
+        { name: "`socials`", value: "Lists socials." }
       );
     message.channel
       .send(embed)
-      .then((msg) => {
-        message.delete();
-      })
       .catch((err) => {
         throw err;
       });

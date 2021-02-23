@@ -19,7 +19,7 @@ module.exports = {
         {
           name: `1️⃣`,
           value:
-            "Mapping of NGOs and which NGOs are receiving funding + SDG indicators https://undocs.org/A/RES/71/313",
+            "Mapping of NGOs https://www.ngoaidmap.org/ and which NGOs are receiving funding + SDG indicators https://undocs.org/A/RES/71/313",
         },
         {
           name: `2️⃣`,
