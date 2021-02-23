@@ -1,11 +1,11 @@
 module.exports = {
-  name: "reaction_groups",
+  name: "assign",
   aliases: ["assign_groups"],
   permissions: ["MANAGE_ROLES"],
   description: "react and assign role member",
   async execute(message, args, cmd, client, Discord) {
     if (message.member.roles.cache.has("813557830401523712")) {
-      const channel = "8813568839538442291";
+      const channel = "813563481231196212";
       const group1Role = message.guild.roles.cache.find(
         (role) => role.name === "CSR Team 1"
       );
@@ -23,7 +23,19 @@ module.exports = {
       let embed = new Discord.MessageEmbed()
         .setColor("#e42643")
         .setTitle("React to the message get group role!")
-        .setDescription("Description Pending");
+        .addFields(
+          {
+            name: `Group 1️⃣`,
+            value:
+              "Mapping of NGOs and which NGOs are receiving funding + SDG indicators https://undocs.org/A/RES/71/313",
+          },
+          {
+            name: `Group 2️⃣`,
+            value:
+              "Tax Information from Registrar of societies/Deputy Registrar/Charity Commissioner",
+          },
+          { name: `Group 3️⃣`, value: "Updating CSR data for companies" }
+        );
 
       let messageEmbed = await message.channel.send(embed).catch((err) => {
         throw err;
@@ -44,13 +56,15 @@ module.exports = {
               .get(user.id)
               .roles.add(group1Role);
           }
-        } else if (reaction.message.channel.id == channel) {
+        }
+        if (reaction.message.channel.id == channel) {
           if (reaction.emoji.name === group2Emoji) {
             await reaction.message.guild.members.cache
               .get(user.id)
               .roles.add(group2Role);
           }
-        } else if (reaction.message.channel.id == channel) {
+        }
+        if (reaction.message.channel.id == channel) {
           if (reaction.emoji.name === group3Emoji) {
             await reaction.message.guild.members.cache
               .get(user.id)
@@ -72,13 +86,15 @@ module.exports = {
               .get(user.id)
               .roles.remove(group1Role);
           }
-        } else if (reaction.message.channel.id == channel) {
+        }
+        if (reaction.message.channel.id == channel) {
           if (reaction.emoji.name === group2Emoji) {
             await reaction.message.guild.members.cache
               .get(user.id)
               .roles.remove(group2Role);
           }
-        } else if (reaction.message.channel.id == channel) {
+        }
+        if (reaction.message.channel.id == channel) {
           if (reaction.emoji.name === group3Emoji) {
             await reaction.message.guild.members.cache
               .get(user.id)

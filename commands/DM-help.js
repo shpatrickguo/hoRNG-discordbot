@@ -13,8 +13,9 @@ module.exports = {
           value: "Checks attendance for meeting with reactions.",
         },
         { name: "`meeting <TIME>`", value: "Announces meeting time." },
-        { name: "`deliver`", value: "Lists deliverables" },
-        { name: "`todo`", value: "ToDo list" }
+        { name: "`deliver`", value: "Lists deliverables." },
+        { name: "`todo`", value: "ToDo list." },
+        { name: "`assign`", value: "Assign groups." }
       );
     message.channel.send(embed).catch((err) => {
       throw err;
