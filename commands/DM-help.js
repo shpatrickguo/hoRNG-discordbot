@@ -24,8 +24,13 @@ module.exports = {
         { name: "`todo`", value: "ToDo list." },
         { name: "`assign`", value: "Assign groups." }
       );
-    message.channel.send(embed).catch((err) => {
-      throw err;
-    });
+    message.channel
+      .send(embed)
+      .then((msg) => {
+        message.delete();
+      })
+      .catch((err) => {
+        throw err;
+      });
   },
 };

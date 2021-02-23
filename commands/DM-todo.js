@@ -17,16 +17,16 @@ module.exports = {
       )
       .addFields(
         {
-          name: `Group 1️⃣`,
+          name: `1️⃣`,
           value:
             "Mapping of NGOs and which NGOs are receiving funding + SDG indicators https://undocs.org/A/RES/71/313",
         },
         {
-          name: `Group 2️⃣`,
+          name: `2️⃣`,
           value:
             "NGO information from Registrar of societies/Deputy Registrar/Charity Commissioner",
         },
-        { name: `Group 3️⃣`, value: "CSR data for companies" }
+        { name: `3️⃣`, value: "CSR data for companies" }
       );
     message.channel
       .send(embed)

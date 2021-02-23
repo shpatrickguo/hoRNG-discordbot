@@ -16,21 +16,27 @@ module.exports = {
         "https://media-exp1.licdn.com/dms/image/C560BAQEYGvW8wH3CSw/company-logo_200_200/0/1605310347627?e=1621468800&v=beta&t=JdCjZ9wqvwcJ1nhgukP25Wz6heKDjLRrnXjdC6_y4LU",
         "https://www.daanmatch.org/"
       )
-      .setURL("https://zoom.us/j/5908765602?pwd=Wmt4SVZhOXhmK2ZyUUl0QUcxa2ZRZz09")
+      .setURL(
+        "https://zoom.us/j/5908765602?pwd=Wmt4SVZhOXhmK2ZyUUl0QUcxa2ZRZz09"
+      )
       .setDescription("Please check your emails for more information.")
       .addFields(
         //{ name: "⏲️ Meeting Length", value: "1 hour", inline: true },
         {
           name: "📝 Agenda",
-          value:
-            "1. Breakout room trivia \n 2. Assign groups",
+          value: "1. Breakout room trivia \n 2. Assign groups",
           inline: true,
         }
       );
     if (cmd === "meeting") {
-      message.channel.send(embed).catch((err) => {
-        throw err;
-      });
+      message.channel
+        .send(embed)
+        .then((msg) => {
+          message.delete();
+        })
+        .catch((err) => {
+          throw err;
+        });
     } else if (cmd === "attendance") {
       embed.setFooter("React to indicate attendance!");
       message.channel
