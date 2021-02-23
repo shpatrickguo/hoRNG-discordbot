@@ -1,6 +1,6 @@
 module.exports = {
-  name: "help",
-  aliases: ["h", "commands"],
+  name: "help2",
+  aliases: ["commands"],
   permissions: [],
   description: "lists commands",
   execute(message, args, cmd, client, Discord) {
@@ -18,7 +18,6 @@ module.exports = {
         { name: "`ping`", value: "Latency check" },
         { name: "`weather LOCATION`", value: "current weather at location" },
         { name: "`avatar`", value: "returns profile pic" },
-        { name: "`moo`", value: "Our anthem" },
         { name: "`clear`", value: "clears commands" }
       )
       .setFooter("Make sure to check the rules channel");

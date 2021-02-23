@@ -1,13 +1,15 @@
 module.exports = {
   name: "deliverables",
-  aliases: ["needs"],
+  aliases: ["needs", "deliver"],
   permissions: [],
   description: "lists deliverables",
   execute(message, args, cmd, client, Discord) {
     const embed = new Discord.MessageEmbed()
       .setColor("2af779")
       .setTitle(`Deliverables`)
-      .setURL("https://docs.google.com/spreadsheets/d/1ksSmyj42J99Rz03rdVy1DXv64e50UED0EPS_yi7GfKc/edit?usp=sharing")
+      .setURL(
+        "https://docs.google.com/spreadsheets/d/1ksSmyj42J99Rz03rdVy1DXv64e50UED0EPS_yi7GfKc/edit?usp=sharing"
+      )
       .setThumbnail(
         "https://static.wixstatic.com/media/0ecae5_f1d5479031114df8ac2adcde1b44a3f4~mv2.png/v1/fill/w_466,h_160,al_c,q_85,usm_0.66_1.00_0.01/DAANG-01-1024x351.webp"
       )
@@ -21,23 +23,23 @@ module.exports = {
           name: "Corporates and NGOs mapped",
           value:
             "1️. All corporations, corporations under CSR, compliant corporations \n 2️. Pan India NGOs, NGOs funded by CSR \n",
-          inline: false
+          inline: false,
         },
         {
           name: "Submit data request for more granular data",
           value: "1️. Gov of India \n 2️. State Ministries \n",
-          inline: false
+          inline: false,
         },
         {
           name: "EDA on corporate social responsibility https://csr.gov.in/",
           value:
             "What else can you infer when joined with CSR and SDG/economic info \n",
-          inline: false
+          inline: false,
         },
         {
           name: "Mapping of corporations",
           value: "How are  they situated based on NGOs? \n",
-          inline: false
+          inline: false,
         }
       );
     message.channel
