@@ -21,10 +21,10 @@ module.exports = {
       )
       .setDescription("Please check your emails for more information.")
       .addFields(
-        //{ name: "⏲️ Meeting Length", value: "1 hour", inline: true },
+        { name: "⏲️ Meeting Length", value: "~1/2 hour", inline: true },
         {
-          name: "📝 Checkin",
-          value: "1. Breakout room trivia \n 2. Assign groups",
+          name: "📝 Check-in Agenda",
+          value: "1. Organize Team structure \n 2.Look over datasets for each group \n 3. Plan workload timeline",
           inline: true,
         }
       );
