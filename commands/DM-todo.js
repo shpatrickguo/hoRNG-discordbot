@@ -1,6 +1,6 @@
 module.exports = {
   name: "todo",
-  aliases: [""],
+  aliases: [],
   permissions: [],
   description: "To do list",
   execute(message, args, cmd, client, Discord) {
@@ -19,12 +19,12 @@ module.exports = {
         {
           name: `1️⃣`,
           value:
-            "Mapping of NGOs https://www.ngoaidmap.org/ and which NGOs are receiving funding + SDG indicators https://undocs.org/A/RES/71/313",
+            "Look through and familiarize yourself with your respective datasets",
         },
         {
           name: `2️⃣`,
           value:
-            "NGO information from Registrar of societies/Deputy Registrar/Charity Commissioner",
+            "Organize team structure: Leadership, reporting, project timeline",
         },
         { name: `3️⃣`, value: "CSR data for companies" }
       );

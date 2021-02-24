@@ -23,7 +23,7 @@ module.exports = {
       .addFields(
         //{ name: "⏲️ Meeting Length", value: "1 hour", inline: true },
         {
-          name: "📝 Agenda",
+          name: "📝 Checkin",
           value: "1. Breakout room trivia \n 2. Assign groups",
           inline: true,
         }
