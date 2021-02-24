@@ -22,6 +22,7 @@ module.exports = {
         },
         { name: "`meeting <TIME>`", value: "Announces meeting time." },
         { name: "`todo`", value: "ToDo list." },
+        { name: "`mail`", value: "This week's general announcements" },
         { name: "`assign`", value: "Assign groups." },
         { name: "`socials`", value: "Lists socials." }
       );
