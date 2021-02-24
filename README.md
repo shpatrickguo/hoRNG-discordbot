@@ -18,8 +18,6 @@ Commands include aliases
 - !avatar: Display Avatar
 - !clear NUMERIC: Clears NUMERIC messages up to 100
 - !help: Lists all public commands 
-- !modtest: Tests whether user is a moderator
-- !moo: Sends a custom youtube link
 - !ping: Sends an embed describing user latency
 - !play URL/KEYWORDS: plays audio from youtube
   - !pause: pauses audio
@@ -27,6 +25,7 @@ Commands include aliases
   - !skip: skips current audio to next on queue
   - !stop: stops current audio and disconnects bot from voice channel
 - !rules: Lists rules of server in an embed
+- !remind TIME ARTICLE: Sends you a reminder about ARTICLE after TIME. 
 - !suggestions TEXT: Sends an embed of user suggestion with reactions
 - !weather LOCATION: sends weather of location
 
@@ -39,6 +38,6 @@ Requires permissions
 
 
 
-# Guides, Tutorials, and Inpsiration
+# Adapted and Inspired from
 - [FreeCodeCamp](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)
 - [CodeLyon](https://www.youtube.com/watch?v=j_sD9udZnCk&ab_channel=CodeLyon)
