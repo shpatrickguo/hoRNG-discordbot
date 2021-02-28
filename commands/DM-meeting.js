@@ -17,16 +17,12 @@ module.exports = {
         "https://www.daanmatch.org/"
       )
       .setURL(
-        "https://zoom.us/j/5908765602?pwd=Wmt4SVZhOXhmK2ZyUUl0QUcxa2ZRZz09"
+        "https://berkeley.zoom.us/j/5741278759"
       )
-      .setDescription("Please check your emails for more information.")
+      .setDescription("")
       .addFields(
-        { name: "⏲️ Meeting Length", value: "~1/2 hour", inline: true },
-        {
-          name: "📝 Check-in Agenda",
-          value: "1. Organize Team structure \n 2.Look over datasets for each group \n 3. Plan workload timeline",
-          inline: true,
-        }
+        { name: "⏲️ Meeting Length", value: "1 hour", inline: true },
+        //{ name: "📝 Check-in Agenda", value: "1. Organize Team structure \n 2.Look over datasets for each group \n 3. Plan workload timeline",inline: true,}
       );
     if (cmd === "meeting") {
       message.channel
