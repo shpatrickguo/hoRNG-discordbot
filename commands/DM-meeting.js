@@ -16,12 +16,9 @@ module.exports = {
         "https://media-exp1.licdn.com/dms/image/C560BAQEYGvW8wH3CSw/company-logo_200_200/0/1605310347627?e=1621468800&v=beta&t=JdCjZ9wqvwcJ1nhgukP25Wz6heKDjLRrnXjdC6_y4LU",
         "https://www.daanmatch.org/"
       )
-      .setURL(
-        "https://berkeley.zoom.us/j/5741278759"
-      )
       .setDescription("")
       .addFields(
-        { name: "⏲️ Meeting Length", value: "1 hour", inline: true },
+        { name: "⏲️ Meeting Length", value: "1/2 hour", inline: true },
         //{ name: "📝 Check-in Agenda", value: "1. Organize Team structure \n 2.Look over datasets for each group \n 3. Plan workload timeline",inline: true,}
       );
     if (cmd === "meeting") {
