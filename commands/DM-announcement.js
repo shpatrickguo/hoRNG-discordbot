@@ -6,7 +6,7 @@ module.exports = {
     execute(message, args, cmd, client, Discord) {
       const embed = new Discord.MessageEmbed()
         .setColor("2af779")
-        .setTitle("NGO data")
+        .setTitle("Ping! Team Map check-in")
         .setThumbnail(
           "https://static.wixstatic.com/media/0ecae5_f1d5479031114df8ac2adcde1b44a3f4~mv2.png/v1/fill/w_466,h_160,al_c,q_85,usm_0.66_1.00_0.01/DAANG-01-1024x351.webp"
         )
@@ -17,9 +17,9 @@ module.exports = {
         )
         .addFields(
           {
-            name: "Group Members",
+            name: "Agenda",
             value:
-              "Apoorv, Joanna, Kaia, and Nancy",
+              "Do you guys have a meeting schedule? \n Have you picked a fearless leader/organizer to represent the team? \n Which data sets are you using and where are you putting them?",
           }
         );
       message.channel
