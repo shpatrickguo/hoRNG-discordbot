@@ -27,10 +27,8 @@ module.exports = {
         { name: "`assign`", value: "Assign groups." },
         { name: "`socials`", value: "Lists socials." }
       );
-    message.channel
-      .send(embed)
-      .catch((err) => {
-        throw err;
-      });
+    message.channel.send(embed).catch((err) => {
+      throw err;
+    });
   },
 };

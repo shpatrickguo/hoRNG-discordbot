@@ -5,7 +5,7 @@ module.exports = {
   description: "creates a meeting",
   execute(message, args, cmd, client, Discord) {
     let messageArgs = args.join(" ");
-    const embedDefault = new Discord.MessageEmbed()
+    let embedDefault = new Discord.MessageEmbed()
       .setColor("2af779")
       .setTitle(`Meeting: ${messageArgs}`)
       .setThumbnail(
@@ -22,7 +22,7 @@ module.exports = {
         value: "1/2 hour",
         inline: true,
       });
-    const embedHour = new Discord.MessageEmbed()
+    let embedHour = new Discord.MessageEmbed()
       .setColor("2af779")
       .setTitle(`Meeting: ${messageArgs}`)
       .setThumbnail(
@@ -34,7 +34,8 @@ module.exports = {
         "https://www.daanmatch.org/"
       )
       .setDescription("")
-      .addFields({ name: "⏲️ Meeting Length", value: "1 hour", inline: true });
+      .addFields({ name: "⏲️ Meeting Length", value: "1 hour", inline: true 
+    });
     if (cmd === "meeting") {
       message.channel
         .send(embedDefault)
